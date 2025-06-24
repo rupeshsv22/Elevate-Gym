@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness Gym</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        .hero-background {
+            background-image: url('/images/herosection.jpeg'); /* Placeholder gym image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Custom animations for image sliding */
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animate-slide-in-right {
+            animation: slideInRight 0.5s ease-out forwards;
+        }
+        .animate-slide-in-left {
+            animation: slideInLeft 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <!-- Header/Navigation Bar -->
+    <header class="bg-gray-800 text-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-wider rounded-md p-2">ELITE FITNESS</a>
+            <div class="mt-4 sm:mt-0 space-x-6">
+                <a href="#home" class="hover:text-teal-400 transition duration-300 ease-in-out p-2 rounded-md">Home</a>
+                <a href="#about" class="hover:text-teal-400 transition duration-300 ease-in-out p-2 rounded-md">About Us</a>
+                <a href="#services" class="hover:text-teal-400 transition duration-300 ease-in-out p-2 rounded-md">Services</a>
+                <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-background h-screen flex items-center justify-center text-white text-center rounded-b-lg">
+        <div class="bg-black bg-opacity-60 p-8 rounded-xl shadow-2xl max-w-2xl mx-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Achieve Your Fitness Goals</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">Join Elite Fitness and transform your body and mind.</p>
+            <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white rounded-lg shadow-xl mx-auto my-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/3e608a/ffffff?text=About+Us+Image" alt="About Us" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6 text-gray-800">Welcome to Elite Fitness</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    At Elite Fitness, we are dedicated to helping you achieve your health and fitness aspirations. Our state-of-the-art facility, experienced trainers, and supportive community create the perfect environment for your fitness journey.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Whether you're looking to build muscle, lose weight, improve endurance, or simply live a healthier lifestyle, we have the resources and expertise to guide you every step of the way.
+                </p>
+                <a href="#services" class="inline-block mt-8 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 ease-in-out">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Our Gym Gallery Section -->
+    <section id="gallery" class="py-16 bg-white rounded-lg shadow-xl mx-auto my-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Gym Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/4CAF50/FFFFFF?text=Gym+Interior+1" alt="Gym Interior 1" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Main Workout Area</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/2196F3/FFFFFF?text=Cardio+Machines" alt="Cardio Machines" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">State-of-the-art Cardio</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/FFC107/FFFFFF?text=Weight+Rack" alt="Weight Rack" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Extensive Free Weights</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/9C27B0/FFFFFF?text=Group+Studio" alt="Group Studio" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Spacious Group Studio</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/00BCD4/FFFFFF?text=Locker+Room" alt="Locker Room" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Clean Locker Rooms</p>
+                </div>
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                <img src="https://placehold.co/400x300/FF9800/FFFFFF?text=Entrance" alt="Entrance" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold">Welcoming Entrance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100 rounded-lg shadow-xl mx-auto my-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Service Card 1: Personal Training with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/5fa8d3/ffffff?text=🏋️" alt="Weight Training Icon" class="mx-auto mb-6 rounded-full bg-blue-100 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Personal Training</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Customized workout plans and one-on-one guidance from certified personal trainers to help you reach your specific goals.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="personal-training">View Album</button>
+            </div>
+            <!-- Service Card 2: Group Classes with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/6ab04c/ffffff?text=🧘" alt="Yoga Icon" class="mx-auto mb-6 rounded-full bg-green-100 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Group Classes</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Energizing group fitness classes including Yoga, Zumba, Spin, and HIIT, led by motivating instructors.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="group-classes">View Album</button>
+            </div>
+            <!-- Service Card 3: Nutrition Guidance with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/e67e22/ffffff?text=🍎" alt="Nutrition Icon" class="mx-auto mb-6 rounded-full bg-orange-100 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Nutrition Guidance</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Expert nutritional advice and meal planning to complement your training and optimize your results.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="nutrition-guidance">View Album</button>
+            </div>
+            <!-- Service Card 4: Pool & Sauna Access with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/9b59b6/ffffff?text=🏊" alt="Pool Icon" class="mx-auto mb-6 rounded-full bg-purple-100 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Pool & Sauna Access</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Enjoy our refreshing swimming pool for low-impact workouts and relax in our luxurious sauna.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="pool-sauna">View Album</button>
+            </div>
+            <!-- Service Card 5: Strength Training Area with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/34495e/ffffff?text=💪" alt="Strength Training Icon" class="mx-auto mb-6 rounded-full bg-gray-200 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Strength Training Area</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Fully equipped area with free weights, resistance machines, and functional training equipment.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="strength-training">View Album</button>
+            </div>
+            <!-- Service Card 6: Cardio Zone with Album Button -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                <img src="https://placehold.co/100x100/d35400/ffffff?text=⏱️" alt="Cardio Icon" class="mx-auto mb-6 rounded-full bg-red-100 p-4">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Cardio Zone</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    A wide array of treadmills, ellipticals, bikes, and stair climbers for all your cardio needs.
+                </p>
+                <button class="open-album-btn mt-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out" data-service="cardio-zone">View Album</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Simple Placeholder) -->
+    <section id="contact" class="py-16 bg-gray-800 text-white rounded-lg shadow-xl mx-auto my-8 max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Join?</h2>
+        <p class="text-xl mb-8">Contact us today to schedule a tour or learn more about our membership options!</p>
+        <p class="text-2xl font-semibold mb-4"><a href="tel:+1234567890" class="hover:text-teal-400 transition duration-300 ease-in-out"> 7900017007 </a></p>
+        <p class="text-2xl font-semibold"><a href="mailto:info@elitefitness.com" class="hover:text-teal-400 transition duration-300 ease-in-out">techdev@gmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center rounded-t-lg">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 Elite Fitness. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Album Modal -->
+    <div id="imageAlbumModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white p-6 rounded-lg shadow-xl relative max-w-3xl w-full">
+            <!-- Close button -->
+            <button id="closeAlbumBtn" class="absolute top-3 right-3 text-gray-700 hover:text-gray-900 text-3xl font-bold">&times;</button>
+
+            <div class="flex items-center justify-center relative">
+                <!-- Previous Button -->
+                <button id="prevImageBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 z-10 opacity-75 hover:opacity-100 transition duration-300 ease-in-out">
+                    &lt;
+                </button>
+
+                <!-- Image Container with animation -->
+                <div class="overflow-hidden w-full max-h-[70vh] flex items-center justify-center">
+                    <img id="albumImage" src="" alt="Gym Album Image" class="rounded-lg max-w-full max-h-full object-contain transition-transform duration-500 ease-in-out">
+                </div>
+
+                <!-- Next Button -->
+                <button id="nextImageBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 z-10 opacity-75 hover:opacity-100 transition duration-300 ease-in-out">
+                    &gt;
+                </button>
+            </div>
+            <div id="imageCaption" class="text-center mt-4 text-gray-700 font-medium"></div>
+        </div>
+    </div>
+
+    <script>
+        // Object containing image URLs and captions for each service album
+        const serviceAlbums = {
+            'personal-training': [
+                { src: 'https://placehold.co/800x600/FF5733/FFFFFF?text=Personal+Training+Session+1', caption: 'Intensive Personal Training Session' },
+                { src: 'https://placehold.co/800x600/33FF57/FFFFFF?text=Weight+Lifting', caption: 'Dedicated Weight Lifting Zone' },
+                { src: 'https://placehold.co/800x600/3357FF/FFFFFF?text=Trainer+Guidance', caption: 'Expert Trainer Guidance' },
+                { src: 'https://placehold.co/800x600/FF33A1/FFFFFF?text=Custom+Workout', caption: 'Customized Workout Plans' },
+                { src: 'https://placehold.co/800x600/A133FF/FFFFFF?text=One-on-One+Coaching', caption: 'One-on-One Coaching' }
+            ],
+            'group-classes': [
+                { src: 'https://placehold.co/800x600/3498db/FFFFFF?text=Group+Class+1', caption: 'Energetic Group Fitness Session' },
+                { src: 'https://placehold.co/800x600/2ecc71/FFFFFF?text=Zumba+Fun', caption: 'Fun Zumba Class' },
+                { src: 'https://placehold.co/800x600/e74c3c/FFFFFF?text=Spin+Class', caption: 'High-Energy Spin Class' }
+            ],
+            'nutrition-guidance': [
+                { src: 'https://placehold.co/800x600/9b59b6/FFFFFF?text=Healthy+Meal+Prep', caption: 'Healthy Meal Preparation' },
+                { src: 'https://placehold.co/800x600/f1c40f/FFFFFF?text=Nutritionist+Consult', caption: 'Personalized Nutrition Consultation' },
+                { src: 'https://placehold.co/800x600/1abc9c/FFFFFF?text=Balanced+Diet', caption: 'Guidance for a Balanced Diet' }
+            ],
+            'pool-sauna': [
+                { src: 'https://placehold.co/800x600/3498db/FFFFFF?text=Swimming+Pool', caption: 'Relaxing Swimming Pool' },
+                { src: 'https://placehold.co/800x600/95a5a6/FFFFFF?text=Sauna+Relaxation', caption: 'Luxurious Sauna Experience' },
+                { src: 'https://placehold.co/800x600/7f8c8d/FFFFFF?text=Aquatic+Workout', caption: 'Aquatic Workout Area' }
+            ],
+            'strength-training': [
+                { src: 'https://placehold.co/800x600/2c3e50/FFFFFF?text=Free+Weights+Area', caption: 'Comprehensive Free Weights Area' },
+                { src: 'https://placehold.co/800x600/c0392b/FFFFFF?text=Resistance+Machines', caption: 'Advanced Resistance Machines' },
+                { src: 'https://placehold.co/800x600/f39c12/FFFFFF?text=Functional+Training', caption: 'Functional Training Zone' }
+            ],
+            'cardio-zone': [
+                { src: 'https://placehold.co/800x600/d35400/FFFFFF?text=Treadmills', caption: 'Modern Treadmills' },
+                { src: 'https://placehold.co/800x600/e67e22/FFFFFF?text=Ellipticals', caption: 'Smooth Elliptical Machines' },
+                { src: 'https://placehold.co/800x600/f39c12/FFFFFF?text=Stationary+Bikes', caption: 'Variety of Stationary Bikes' }
+            ]
+        };
+
+        let currentAlbumImages = []; // Stores the currently active album's images
+        let currentImageIndex = 0;
+
+        // Get references to DOM elements
+        const openAlbumButtons = document.querySelectorAll('.open-album-btn'); // Select all buttons with this class
+        const imageAlbumModal = document.getElementById('imageAlbumModal');
+        const closeAlbumBtn = document.getElementById('closeAlbumBtn');
+        const prevImageBtn = document.getElementById('prevImageBtn');
+        const nextImageBtn = document.getElementById('nextImageBtn');
+        const albumImage = document.getElementById('albumImage');
+        const imageCaption = document.getElementById('imageCaption');
+
+        // Function to display an image in the album with a sliding effect
+        function showImage(index, direction = 0) { // direction: -1 for prev, 1 for next, 0 for initial load
+            // Ensure index wraps around if out of bounds
+            currentImageIndex = (index + currentAlbumImages.length) % currentAlbumImages.length;
+
+            // Apply animation classes based on direction
+            // Clear existing animation classes first
+            albumImage.classList.remove('animate-slide-in-right', 'animate-slide-in-left');
+            // Force reflow to ensure animation restarts
+            void albumImage.offsetWidth;
+
+            if (direction === 1) { // Next button clicked, slide in from right
+                albumImage.classList.add('animate-slide-in-right');
+            } else if (direction === -1) { // Previous button clicked, slide in from left
+                albumImage.classList.add('animate-slide-in-left');
+            }
+
+            // Update image source and caption
+            albumImage.src = currentAlbumImages[currentImageIndex].src;
+            albumImage.alt = currentAlbumImages[currentImageIndex].caption;
+            imageCaption.textContent = currentAlbumImages[currentImageIndex].caption;
+        }
+
+        // Event listener to open the album modal (using event delegation for multiple buttons)
+        openAlbumButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const serviceType = event.target.dataset.service; // Get the service type from data-service attribute
+                if (serviceAlbums[serviceType]) {
+                    currentAlbumImages = serviceAlbums[serviceType]; // Set the current album images
+                    currentImageIndex = 0; // Reset index for new album
+                    imageAlbumModal.classList.remove('hidden'); // Show the modal
+                    showImage(0); // Display the first image of the selected album
+                } else {
+                    console.error('Album not found for service:', serviceType);
+                }
+            });
+        });
+
+        // Event listener to close the album modal
+        closeAlbumBtn.addEventListener('click', () => {
+            imageAlbumModal.classList.add('hidden'); // Hide the modal
+        });
+
+        // Event listener for previous image button
+        prevImageBtn.addEventListener('click', () => {
+            if (currentAlbumImages.length > 0) {
+                showImage(currentImageIndex - 1, -1);
+            }
+        });
+
+        // Event listener for next image button
+        nextImageBtn.addEventListener('click', () => {
+            if (currentAlbumImages.length > 0) {
+                showImage(currentImageIndex + 1, 1);
+            }
+        });
+
+        // Keyboard navigation for album (optional, but good for accessibility)
+        document.addEventListener('keydown', (e) => {
+            if (!imageAlbumModal.classList.contains('hidden')) { // Only active if modal is open
+                if (e.key === 'ArrowLeft') {
+                    if (currentAlbumImages.length > 0) {
+                        showImage(currentImageIndex - 1, -1);
+                    }
+                } else if (e.key ===  'ArrowRight') {
+                    if (currentAlbumImages.length > 0) {
+                        showImage(currentImageIndex + 1, 1);
+                    }
+                } else if (e.key === 'Escape') {
+                    imageAlbumModal.classList.add('hidden');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
